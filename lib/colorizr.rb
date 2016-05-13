@@ -12,7 +12,8 @@ class String
   def self.create_colors
   	@@color_codes.each do |key, value|
   	  self.send(:define_method, "#{key}") do
-  	  	puts "\e[#{value}m#{self}\e[0m" 
+  	  	strng = "\e[#{value}m#{self}\e[0m"
+  	  	return strng 
   	  end
     end
   end
@@ -22,6 +23,9 @@ class String
   end
 
   def self.sample_colors
+  	self.colors.each do |color|
+  		puts "This is " + "#{color.to_s.capitalize}".send(color)
+  	end
   end
  #puts "\e[34mThis is blue text.\e[0m" 
 end
@@ -40,4 +44,5 @@ puts "this should be light blue".light_blue
 puts "this should be white".white
 puts "this should be light grey".light_grey
 puts "this should be black".black
-#String.sample_colors
+
+String.sample_colors
