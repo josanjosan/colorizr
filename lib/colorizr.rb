@@ -24,7 +24,7 @@ class String
 
   def self.sample_colors
   	self.colors.each do |color|
-  		puts "This is " + "#{color.to_s.capitalize}".send(color)
+  		puts "This is " + "#{color.to_s.split("_").map(&:capitalize).join(' ')}".send(color)
   	end
   end
  #puts "\e[34mThis is blue text.\e[0m" 
