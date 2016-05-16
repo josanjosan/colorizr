@@ -1,0 +1,12 @@
+How does your gem take advantage of Ruby’s metaprogramming capabilities?
+In a very basic way, I'm using it to keep the code DRY by creating multiple methods dinamically from a hash containing method names as keys, while values are color codes which represent different color output that has to end up in every specific method code.
+So if in the future I need to add one o more method colors, I'll just update the color_codes hash.
+
+How long did you spend working on this project?
+On the code, about 2 hours, not really continuos. I'm on vacation touring Europe, so I've had trouble getting wifi, which is imortant to check docs. I took another 2 hours to do the reflections and README files (README course included).
+
+What was the most rewarding challenge you conquered?
+Understanding how metaprogramming actually works.
+
+Where do you still have room to grow?
+I know practical use of metaprogramming when showed to me, but I've not been able to come up myself with a metaprogramming solution for a new problem I face, I guess it will come with experience and facing more complex problems.
